@@ -2353,8 +2353,8 @@ run:
 	config_init();
 	cols = MAX(cols, 1);
 	rows = MAX(rows, 1);
-	defaultbg = MAX(LEN(colorname), 256);
-	alphaUnfocus = alpha-alphaOffset;
+	//defaultbg = MAX(LEN(colorname), 256);
+	//alphaUnfocus = alpha-alphaOffset;
 	tnew(cols, rows);
 	xinit(cols, rows);
 	xsetenv();

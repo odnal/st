@@ -5,6 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
+#include <X11/X.h>
+#include <X11/Xutil.h>
 static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
 static char *font2[] = { "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
 static int borderpx = 2;
@@ -241,6 +243,7 @@ static MouseShortcut mshortcuts[] = {
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
 #define TERMMOD (Mod1Mask|ShiftMask)
+#define TERMMOD2 (ControlMask|ShiftMask)
 
 static char *openurlcmd[] = { "/bin/sh", "-c", "st-urlhandler -o", "externalpipe", NULL };
 static char *copyurlcmd[] = { "/bin/sh", "-c", "st-urlhandler -c", "externalpipe", NULL };
@@ -283,6 +286,11 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
 	{ MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
 	{ MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
+    { ControlMask,          XK_equal,       zoom,           {.f = +1} },
+    { ControlMask,          XK_minus,        zoom,           {.f = -1} },
+    { TERMMOD2,          XK_plus,        zoomreset,      {.f =  0} },
+	{ TERMMOD2,              XK_C,           clipcopy,       {.i =  0} },
+	{ TERMMOD2,              XK_V,           clippaste,      {.i =  0} },
 };
 
 /*
