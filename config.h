@@ -89,7 +89,7 @@ const int boxdraw_braille = 0;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "xterm-256color";
 
 /*
  * spaces per tab
@@ -115,25 +115,27 @@ float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
+    "#2E3436", 
+    "#a40000", 
+    "#4E9A06", 
+    "#C4A000", 
+    "#3465A4", 
+    "#75507B", 
+    "#ce5c00", 
+    "#babdb9", 
+    "#555753", 
+    "#EF2929", 
+    "#8AE234", 
+    "#FCE94F", 
+    "#729FCF", 
+    "#AD7FA8", 
+    "#fcaf3e", 
+    "#EEEEEC", 
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#add8e6", /* 256 -> cursor */
+	//"#add8e6", /* 256 -> cursor */
+    "#babdb9", /* 256 -> cursor, white */
+	//"#ffdd33", /* 256 -> cursor, gruber-darker yellow*/
 	"#555555", /* 257 -> rev cursor*/
 	"#282828", /* 258 -> bg */
 	"#ebdbb2", /* 259 -> fg */

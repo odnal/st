@@ -7,7 +7,7 @@
 !st.allow_bold: false
 !st.font: DejaVu Sans Mono:size=11
 !'Iosevka:pixelsize=16:a^Cialias=true:autohint=true'
-st.font: Iosevka:pixelsize=16:alias=true:autohint=true
+st.font: Iosevka Fixed, Iosevka Fixed Regular:pixelsize=24:alias=true:autohint=true
 st*scrollBar: false
 st*letterSpace: 0
 
