@@ -1,3 +1,14 @@
+# Install:
+```bash
+sudo apt install suckless-tools
+sudo apt install libfreetype6-dev libharfbuzz-dev libfontconfig1-dev libxft-def -y
+xrdb ./Xdefaults
+make clean
+make
+```
+
+Once it seems to build correctly you can do a `make install`.
+
 # Luke's build of st - the simple (suckless) terminal
 
 The [suckless terminal (st)](https://st.suckless.org/) with some additional
