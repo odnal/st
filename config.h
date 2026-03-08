@@ -109,7 +109,7 @@ char *termname = "xterm-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 1.0;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
@@ -137,7 +137,7 @@ static const char *colorname[] = {
     "#babdb9", /* 256 -> cursor, white */
 	//"#ffdd33", /* 256 -> cursor, gruber-darker yellow*/
 	"#555555", /* 257 -> rev cursor*/
-	"#282828", /* 258 -> bg */
+	"#181818", /* 258 -> bg */
 	"#ebdbb2", /* 259 -> fg */
 };
 
